@@ -1,305 +1,293 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hotel Boreal</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hotel Boreal</title>
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #fff;
-            color: #000;
-        }
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        header {
-            background: url('imagenes/banner.jpg') no-repeat center center/cover;
-            position: relative;
-            height: 250px;
-            color: rgb(233, 233, 233);
-        }
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 
-        /* Overlay */
-        header::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 250px;
-            background-color: rgba(0, 0, 0, 0.65);
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
+  <style>
+    :root {
+      --boreal-azul: #0f416b;
+      --boreal-celeste: #b1d5db;
+      --boreal-blanco: #ffffff;
+      --boreal-acento: #6ac2de;
+    }
 
-        nav {
-            display: flex;
-            justify-content: flex-end;
-            padding: 20px 40px;
-            position: relative;
-            z-index: 2;
-        }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #000;
+      background-color: #f7f9fb;
+    }
 
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            letter-spacing: 1.5px;
-        }
+    /* Header con overlay */
+    header {
+      background: url('imagenes/banner.jpg') no-repeat center 70% / cover;
+      height: 300px;
+      position: relative;
+      color: rgb(233, 233, 233);
+      padding-top: 70px;
+    }
 
-        nav a:hover {
-            text-decoration: underline;
-        }
+    header::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      background-color: rgba(0, 0, 0, 0.65);
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-        .header-content {
-            position: relative;
-            z-index: 2;
-            display: flex;
-            align-items: center;
-            padding: 0 40px;
-            height: calc(250px - 60px);
-        }
+    .navbar {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
 
-        .logo {
-            width: 175px;
-            height: 175px;
-            margin-left: 55px;
-            margin-right: 65px;
-            flex-shrink: 0;
-        }
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
 
-        .logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain; /* O "cover" si quieres llenar el círculo */
-            border-radius: 50%;
-            background-color: #ffffff; /* opcional, si el logo tiene fondo transparente */
-            padding: 4px; /* opcional, da un borde interior bonito */
-        }
+    .navbar-nav .nav-link:hover {
+      text-decoration: underline;
+    }
 
-        .logo svg {
-            width: 110px;
-            height: 110px;
-            fill: #6ac2de;
-        }
+    .header-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      height: calc(280px - 60px);
+    }
 
-        .header-text {
-            max-width: 600px;
-        }
+    .logo img {
+      width: 175px;
+      height: 175px;
+      border-radius: 50%;
+      background-color: #fff;
+      padding: 4px;
+      object-fit: contain;
+    }
 
-        .header-text h1 {
-            font-size: 52px;
-            margin-bottom: 10px;
-            color: #b1d5db;
-        }
+    .header-text h1 {
+      font-size: 52px;
+      color: var(--boreal-celeste);
+    }
 
-        .header-text p {
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 1.4;
-            color: #d4e6ea;
-            max-width: 560px;
-        }
+    .header-text p {
+      color: #d4e6ea;
+      font-weight: 500;
+    }
 
-        main {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 0 20px;
-        }
+    h2.text-primary {
+      color: var(--boreal-acento) !important;
+    }
 
-        .room {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 50px;
-            align-items: center;
-        }
+    img.rounded.shadow {
+      border: 3px solid #e0eef2;
+    }
 
-        .room:nth-child(even) {
-            flex-direction: row-reverse;
-        }
+    .features .feature-item {
+      background-color: #f4f9fb;
+      border-radius: 10px;
+      padding: 10px 15px;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      transition: transform 0.2s ease, background-color 0.3s ease;
+    }
 
-        .room img {
-            width: 45%;
-            border-radius: 5px;
-            box-shadow: 0 0 8px rgba(0,0,0,0.15);
-        }
+    .feature-item:hover {
+      transform: translateY(-3px);
+      background-color: #e9f4f8;
+    }
 
-        .room-description {
-            width: 50%;
-        }
+    .feature-item i {
+      color: var(--boreal-acento);
+      font-size: 1.3rem;
+      margin-right: 10px;
+    }
 
-        .room-description h2 {
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
+    .feature-item span {
+      font-weight: 500;
+      color: #333;
+    }
 
-        .room-description p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
+    footer {
+      background-color: var(--boreal-azul);
+      color: #9cc4cc;
+      font-size: 12px;
+    }
 
-        .room-description ul {
-            list-style-type: disc;
-            padding-left: 20px;
-            line-height: 1.5;
-        }
+    .social-icons img {
+      width: 30px;
+      height: 30px;
+      transition: filter 0.3s ease;
+      cursor: pointer;
+    }
 
-        footer {
-            background-color: #0f416b;
-            color: #9cc4cc;
-            font-size: 12px;
-            padding: 20px 40px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-        }
+    .social-icons .whatsapp img {
+      filter: invert(65%) sepia(82%) saturate(400%) hue-rotate(85deg) brightness(95%) contrast(90%);
+    }
 
-        .footer-text {
-            max-width: 600px;
-        }
+    .social-icons .linkedin img {
+      filter: invert(36%) sepia(92%) saturate(900%) hue-rotate(185deg) brightness(95%) contrast(95%);
+    }
 
-        .social-icons {
-            display: flex;
-            gap: 20px;
-        }
+    .social-icons .instagram img {
+      filter: invert(44%) sepia(80%) saturate(600%) hue-rotate(310deg) brightness(95%) contrast(90%);
+    }
 
-        .social-icons img {
-            width: 30px;
-            height: 30px;
-            transition: filter 0.3s ease;
-            cursor: pointer;
-        }
+    .social-icons a:hover img {
+      filter: invert(79%) sepia(21%) saturate(400%) hue-rotate(160deg) brightness(102%) contrast(97%);
+    }
 
-        /* Color WhatsApp (verde) */
-        .social-icons .whatsapp img {
-            filter: invert(65%) sepia(82%) saturate(400%) hue-rotate(85deg) brightness(95%) contrast(90%);
-        }
+    /* RESPONSIVE */
+    @media (max-width: 767.98px) {
+      header {
+        height: auto;
+        padding-bottom: 20px;
+        text-align: center;
+      }
 
-        /* Color LinkedIn (azul) */
-        .social-icons .linkedin img {
-            filter: invert(36%) sepia(92%) saturate(900%) hue-rotate(185deg) brightness(95%) contrast(95%);
-        }
+      header::before {
+        height: 100%;
+      }
 
-        /* Color Instagram (rosado-morado) */
-        .social-icons .instagram img {
-            filter: invert(44%) sepia(80%) saturate(600%) hue-rotate(310deg) brightness(95%) contrast(90%);
-        }
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        padding: 1rem 0;
+      }
 
-        /* Efecto hover */
-        .social-icons a:hover img {
-            filter: invert(79%) sepia(21%) saturate(400%) hue-rotate(160deg) brightness(102%) contrast(97%);
-        }
+      .logo {
+        margin-bottom: 1rem;
+      }
 
+      .logo img {
+        width: 140px;
+        height: 140px;
+      }
 
-        @media(max-width: 768px) {
-            nav {
-                justify-content: center;
-                flex-wrap: wrap;
-            }
+      .features {
+        flex-direction: column;
+      }
 
-            nav a {
-                margin: 10px 15px;
-            }
+      .feature-item {
+        flex: 1 1 100%;
+      }
 
-            .room {
-                flex-direction: column !important;
-                align-items: flex-start;
-            }
+      footer .footer-text {
+        text-align: center !important;
+        margin-bottom: 1rem;
+      }
 
-            .room img, .room-description {
-                width: 100%;
-            }
-
-            main {
-                margin: 20px auto;
-            }
-
-            footer {
-                flex-direction: column;
-                text-align: center;
-                gap: 10px;
-            }
-        }
-    </style>
+      footer .social-icons {
+        justify-content: center !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <nav>
-        <a href="#">INICIO</a>
-        <a href="#">HABITACIONES</a>
-        <a href="#">SERVICIOS</a>
-        <a href="#">PROMOCIONES</a>
-    </nav>
-    <div class="header-content">
-        <div class="logo">
-            <img src="imagenes/logo.png" alt="Logo del Hotel Boreal">
-        </div>
-        <div class="header-text">
-            <h1>Hotel Boreal</h1>
-            <p>Un lugar que combina calidez, elegancia y naturaleza en escenarios fríos. Ofrece comodidad, tranquilidad y paisajes únicos en un ambiente moderno y acogedor.</p>
-        </div>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold" href="#">Hotel Boreal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav" aria-controls="menuNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="menuNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="#">INICIO</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">HABITACIONES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">SERVICIOS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">PROMOCIONES</a></li>
+        </ul>
+      </div>
     </div>
-</header>
+  </nav>
 
+  <!-- Header -->
+  <header class="text-light">
+    <div class="container header-content flex-column flex-md-row">
+      <div class="logo me-md-5 mb-3 mb-md-0">
+        <img src="imagenes/logo.png" alt="Logo del Hotel Boreal">
+      </div>
+      <div class="header-text text-center text-md-start">
+        <h1 class="fw-bold">Hotel Boreal</h1>
+        <p>Un lugar que combina calidez, elegancia y naturaleza en escenarios fríos. Ofrece comodidad, tranquilidad y paisajes únicos en un ambiente moderno y acogedor.</p>
+      </div>
+    </div>
+  </header>
 
-<main>
-    <section class="room">
-        <img src="imagenes/suite.webp" alt="Suite Aurora Boreal">
-        <div class="room-description">
-            <h2>Suite "Aurora Boreal"</h2>
-            <p>Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.</p>
-            <strong>Incluye:</strong>
-            <ul>
-                <li>Jacuzzi interior con vista panorámica</li>
-                <li>Sala de estar con chimenea moderna</li>
-                <li>Amenities premium</li>
-                <li>Mini bar y servicio a la habitación</li>
-                <li>Cena de bienvenida incluida</li>
-            </ul>
+  <!-- Main content -->
+  <main class="container my-5">
+    <section class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <img src="imagenes/suite.webp" alt="Suite Aurora Boreal" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3 text-primary">Suite "Aurora Boreal"</h2>
+        <p>Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.</p>
+        <strong>Incluye:</strong>
+        <div class="row g-2 features">
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-water"></i><span>Jacuzzi interior con vista panorámica</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-fire"></i><span>Sala de estar con chimenea moderna</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-star"></i><span>Amenities premium</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-cup-hot"></i><span>Mini bar y servicio a la habitación</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-heart"></i><span>Cena de bienvenida incluida</span></div></div>
         </div>
+      </div>
     </section>
 
-    <section class="room">
-        <img src="imagenes/pino.jpg" alt="Habitación Rústica Pino Blanco">
-        <div class="room-description">
-            <h2>Habitación Rústica "Pino Blanco"</h2>
-            <p>Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.</p>
-            <strong>Incluye:</strong>
-            <ul>
-                <li>Chimenea tradicional</li>
-                <li>Vista al bosque nevado</li>
-                <li>Calefacción central</li>
-                <li>Desayuno casero incluido</li>
-            </ul>
+    <section class="row align-items-center flex-md-row-reverse mb-5">
+      <div class="col-md-6">
+        <img src="imagenes/pino.jpg" alt="Habitación Rústica Pino Blanco" class="img-fluid rounded shadow">
+      </div>
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3 text-primary">Habitación Rústica "Pino Blanco"</h2>
+        <p>Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.</p>
+        <strong>Incluye:</strong>
+        <div class="row g-2 features">
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-fire"></i><span>Chimenea tradicional</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-tree"></i><span>Vista al bosque nevado</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-thermometer-half"></i><span>Calefacción central</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-egg-fried"></i><span>Desayuno casero incluido</span></div></div>
         </div>
+      </div>
     </section>
-</main>
+  </main>
 
-<footer>
-    <div class="footer-text">
-        Al utilizar este sitio web, acepta el uso de cookies. Política de cookies | Términos y condiciones | Política de privacidad | Cache: 2025-09-18 20:31:31 | Textos | Framework: 3 |
+  <!-- Footer -->
+  <footer class="py-3 px-4">
+    <div class="container">
+      <div class="row text-center text-md-start align-items-center">
+        <div class="col-md-8 footer-text mb-2 mb-md-0">
+          Al utilizar este sitio web, acepta el uso de cookies. Política de cookies | Términos y condiciones | Política de privacidad | Cache: 2025-09-18 20:31:31 | Textos | Framework: 3 |
+        </div>
+        <div class="col-md-4 social-icons d-flex gap-3 justify-content-center justify-content-md-end">
+          <a href="#" class="whatsapp" aria-label="WhatsApp"><img src="imagenes/whatsapp.svg" alt="WhatsApp"></a>
+          <a href="#" class="linkedin" aria-label="LinkedIn"><img src="imagenes/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#" class="instagram" aria-label="Instagram"><img src="imagenes/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
     </div>
-    <div class="social-icons" aria-label="Redes sociales">
-    <a href="#" class="whatsapp" aria-label="WhatsApp">
-        <img src="imagenes/whatsapp.svg" alt="WhatsApp">
-    </a>
-    <a href="#" class="linkedin" aria-label="LinkedIn">
-        <img src="imagenes/linkedin.svg" alt="LinkedIn">
-    </a>
-    <a href="#" class="instagram" aria-label="Instagram">
-        <img src="imagenes/instagram.svg" alt="Instagram">
-    </a>
-</div>
-
-</footer>
+  </footer>
 
 </body>
 </html>
