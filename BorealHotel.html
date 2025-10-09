@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Boreal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fff;
+            color: #000;
+        }
+
+        header {
+            background: url('') no-repeat center center/cover;
+            position: relative;
+            height: 250px;
+            color: rgb(233, 233, 233);
+        }
+
+        /* Overlay */
+        header::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 250px;
+            background-color: rgba(0, 0, 0, 0.65);
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        nav {
+            display: flex;
+            justify-content: flex-end;
+            padding: 20px 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            padding: 0 40px;
+            height: calc(250px - 60px);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            background: #0f416b;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+
+        .logo svg {
+            width: 60px;
+            height: 60px;
+            fill: #6ac2de;
+        }
+
+        .header-text {
+            max-width: 600px;
+        }
+
+        .header-text h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #b1d5db;
+        }
+
+        .header-text p {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 1.4;
+            color: #d4e6ea;
+            max-width: 560px;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .room {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .room:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .room img {
+            width: 45%;
+            border-radius: 5px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.15);
+        }
+
+        .room-description {
+            width: 50%;
+        }
+
+        .room-description h2 {
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .room-description p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .room-description ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            line-height: 1.5;
+        }
+
+        footer {
+            background-color: #0f416b;
+            color: #9cc4cc;
+            font-size: 12px;
+            padding: 20px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-text {
+            max-width: 600px;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icons svg {
+            width: 24px;
+            height: 24px;
+            fill: #9cc4cc;
+            cursor: pointer;
+            transition: fill 0.3s;
+        }
+
+        .social-icons svg:hover {
+            fill: #6ac2de;
+        }
+
+        @media(max-width: 768px) {
+            nav {
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                margin: 10px 15px;
+            }
+
+            .room {
+                flex-direction: column !important;
+                align-items: flex-start;
+            }
+
+            .room img, .room-description {
+                width: 100%;
+            }
+
+            main {
+                margin: 20px auto;
+            }
+
+            footer {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <a href="#">INICIO</a>
+        <a href="#">HABITACIONES</a>
+        <a href="#">SERVICIOS</a>
+        <a href="#">PROMOCIONES</a>
+    </nav>
+    <div class="header-content">
+        <div class="logo" aria-label="Logo Boreal" role="img">
+            <svg viewBox="0 0 64 64" xmlns="" aria-hidden="true" focusable="false">
+                <circle cx="32" cy="32" r="30" stroke="#6ac2de" stroke-width="3" fill="#0f416b"/>
+                <path d="M22 40c5-7 20-10 20-20" stroke="#6ac2de" stroke-width="3" fill="none"/>
+                <circle cx="32" cy="32" r="4" fill="#6ac2de"/>
+                <circle cx="24" cy="26" r="2" fill="#6ac2de"/>
+            </svg>
+        </div>
+        <div class="header-text">
+            <h1>Hotel Boreal</h1>
+            <p>Un lugar que combina calidez, elegancia y naturaleza en escenarios fríos. Ofrece comodidad, tranquilidad y paisajes únicos en un ambiente moderno y acogedor.</p>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="room">
+        <img src="" alt="Suite Aurora Boreal">
+        <div class="room-description">
+            <h2>Suite "Aurora Boreal"</h2>
+            <p>Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.</p>
+            <strong>Incluye:</strong>
+            <ul>
+                <li>Jacuzzi interior con vista panorámica</li>
+                <li>Sala de estar con chimenea moderna</li>
+                <li>Amenities premium</li>
+                <li>Mini bar y servicio a la habitación</li>
+                <li>Cena de bienvenida incluida</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="room">
+        <img src="" alt="Habitación Rústica Pino Blanco">
+        <div class="room-description">
+            <h2>Habitación Rústica "Pino Blanco"</h2>
+            <p>Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.</p>
+            <strong>Incluye:</strong>
+            <ul>
+                <li>Chimenea tradicional</li>
+                <li>Vista al bosque nevado</li>
+                <li>Calefacción central</li>
+                <li>Desayuno casero incluido</li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-text">
+        Al utilizar este sitio web, acepta el uso de cookies. Política de cookies | Términos y condiciones | Política de privacidad | Cache: 2025-09-18 20:31:31 | Textos | Framework: 3 |
+    </div>
+    <div class="social-icons" aria-label="Redes sociales">
+        <!-- WhatsApp -->
+        <a href="#" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 2.11.552 4.07 1.51 5.807L0 24l6.343-1.5A11.937 11.937 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.394 16.56c-.278.782-1.626 1.451-2.23 1.548-.6.096-1.2.136-2.405-.36-1.415-.623-2.324-1.24-3.458-2.374-.978-.978-1.532-2.15-1.674-2.72-.141-.57-.06-1.01.063-1.205.14-.227.355-.367.597-.495.155-.078.36-.18.54-.27.18-.09.24-.135.36-.225.119-.091.119-.136.18-.227.06-.09.03-.135-.015-.225-.039-.082-.54-1.32-.738-1.81-.195-.447-.393-.387-.54-.39-.14-.004-.3-.01-.455-.01-.155 0-.405.055-.62.26-.216.204-.825.806-.825 1.97 0 1.16.845 2.285.963 2.44.117.153 1.666 2.54 4.04 3.56 2.372 1.02 2.372.68 2.8.64.43-.04 1.37-.56 1.562-1.103.194-.543.194-1.008.135-1.103z"/></svg>
+        </a>
+        <!-- LinkedIn -->
+        <a href="#" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24"><path d="M4.984 3.5c0 1.381-1.114 2.5-2.484 2.5S0 4.881 0 3.5 1.114 1 2.5 1 4.984 2.12 4.984 3.5zM.5 7h4.973v14H.5V7zM7.521 7h4.773v1.96h.068c.664-1.256 2.287-2.588 4.708-2.588 5.036 0 5.96 3.315 5.96 7.615V21h-5V15.996c0-1.239-.026-2.838-1.73-2.838-1.732 0-2 1.354-2 2.75V21h-5.013V7z"/></svg>
+        </a>
+        <!-- Instagram -->
+        <a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.353 3.608 1.328.975.975 1.267 2.243 1.328 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.353 2.633-1.328 3.608-.975.975-2.243 1.267-3.608 1.328-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.353-3.608-1.328-.975-.975-1.267-2.243-1.328-3.608-.058-1.266-.07-1.645-.07-4.85s.012-3.584.07-4.85c.062-1.366.353-2.633 1.328-3.608C4.518 2.586 5.785 2.294 7.15 2.232 8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.332.014 7.052.072 5.577.134 4.216.455 3.092 1.58 1.968 2.703 1.646 4.065 1.58 5.54.99 6.142.88 7.812.88 12c0 4.19.109 5.857.7 6.458.066 1.477.388 2.838 1.512 3.961 1.123 1.123 2.486 1.445 3.96 1.512.6.59 2.27.7 6.458.7s5.858-.11 6.458-.7c1.475-.066 2.838-.388 3.96-1.512 1.123-1.123 1.446-2.484 1.512-3.96.588-.6.697-2.27.697-6.457s-.11-5.857-.698-6.458c-.065-1.476-.388-2.837-1.512-3.96-1.123-1.123-2.486-1.445-3.96-1.512C17.857.014 17.448 0 14.189 0h-4.379z"/></svg>
+        </a>
+    </div>
+</footer>
+
+</body>
+</html>
