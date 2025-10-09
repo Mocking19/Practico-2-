@@ -18,7 +18,7 @@
         }
 
         header {
-            background: url('') no-repeat center center/cover;
+            background: url('imagenes/banner.jpg') no-repeat center center/cover;
             position: relative;
             height: 250px;
             color: rgb(233, 233, 233);
@@ -67,20 +67,25 @@
         }
 
         .logo {
-            width: 100px;
-            height: 100px;
-            background: #0f416b;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-right: 25px;
+            width: 175px;
+            height: 175px;
+            margin-left: 55px;
+            margin-right: 65px;
             flex-shrink: 0;
         }
 
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain; /* O "cover" si quieres llenar el círculo */
+            border-radius: 50%;
+            background-color: #ffffff; /* opcional, si el logo tiene fondo transparente */
+            padding: 4px; /* opcional, da un borde interior bonito */
+        }
+
         .logo svg {
-            width: 60px;
-            height: 60px;
+            width: 110px;
+            height: 110px;
             fill: #6ac2de;
         }
 
@@ -89,14 +94,14 @@
         }
 
         .header-text h1 {
-            font-size: 32px;
+            font-size: 52px;
             margin-bottom: 10px;
             color: #b1d5db;
         }
 
         .header-text p {
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             line-height: 1.4;
             color: #d4e6ea;
             max-width: 560px;
@@ -162,20 +167,36 @@
 
         .social-icons {
             display: flex;
-            gap: 15px;
+            gap: 20px;
         }
 
-        .social-icons svg {
-            width: 24px;
-            height: 24px;
-            fill: #9cc4cc;
+        .social-icons img {
+            width: 30px;
+            height: 30px;
+            transition: filter 0.3s ease;
             cursor: pointer;
-            transition: fill 0.3s;
         }
 
-        .social-icons svg:hover {
-            fill: #6ac2de;
+        /* Color WhatsApp (verde) */
+        .social-icons .whatsapp img {
+            filter: invert(65%) sepia(82%) saturate(400%) hue-rotate(85deg) brightness(95%) contrast(90%);
         }
+
+        /* Color LinkedIn (azul) */
+        .social-icons .linkedin img {
+            filter: invert(36%) sepia(92%) saturate(900%) hue-rotate(185deg) brightness(95%) contrast(95%);
+        }
+
+        /* Color Instagram (rosado-morado) */
+        .social-icons .instagram img {
+            filter: invert(44%) sepia(80%) saturate(600%) hue-rotate(310deg) brightness(95%) contrast(90%);
+        }
+
+        /* Efecto hover */
+        .social-icons a:hover img {
+            filter: invert(79%) sepia(21%) saturate(400%) hue-rotate(160deg) brightness(102%) contrast(97%);
+        }
+
 
         @media(max-width: 768px) {
             nav {
@@ -218,13 +239,8 @@
         <a href="#">PROMOCIONES</a>
     </nav>
     <div class="header-content">
-        <div class="logo" aria-label="Logo Boreal" role="img">
-            <svg viewBox="0 0 64 64" xmlns="" aria-hidden="true" focusable="false">
-                <circle cx="32" cy="32" r="30" stroke="#6ac2de" stroke-width="3" fill="#0f416b"/>
-                <path d="M22 40c5-7 20-10 20-20" stroke="#6ac2de" stroke-width="3" fill="none"/>
-                <circle cx="32" cy="32" r="4" fill="#6ac2de"/>
-                <circle cx="24" cy="26" r="2" fill="#6ac2de"/>
-            </svg>
+        <div class="logo">
+            <img src="imagenes/logo.png" alt="Logo del Hotel Boreal">
         </div>
         <div class="header-text">
             <h1>Hotel Boreal</h1>
@@ -233,9 +249,10 @@
     </div>
 </header>
 
+
 <main>
     <section class="room">
-        <img src="" alt="Suite Aurora Boreal">
+        <img src="imagenes/suite.webp" alt="Suite Aurora Boreal">
         <div class="room-description">
             <h2>Suite "Aurora Boreal"</h2>
             <p>Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.</p>
@@ -251,7 +268,7 @@
     </section>
 
     <section class="room">
-        <img src="" alt="Habitación Rústica Pino Blanco">
+        <img src="imagenes/pino.jpg" alt="Habitación Rústica Pino Blanco">
         <div class="room-description">
             <h2>Habitación Rústica "Pino Blanco"</h2>
             <p>Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.</p>
@@ -271,19 +288,17 @@
         Al utilizar este sitio web, acepta el uso de cookies. Política de cookies | Términos y condiciones | Política de privacidad | Cache: 2025-09-18 20:31:31 | Textos | Framework: 3 |
     </div>
     <div class="social-icons" aria-label="Redes sociales">
-        <!-- WhatsApp -->
-        <a href="#" aria-label="WhatsApp">
-            <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.373 0 12c0 2.11.552 4.07 1.51 5.807L0 24l6.343-1.5A11.937 11.937 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm6.394 16.56c-.278.782-1.626 1.451-2.23 1.548-.6.096-1.2.136-2.405-.36-1.415-.623-2.324-1.24-3.458-2.374-.978-.978-1.532-2.15-1.674-2.72-.141-.57-.06-1.01.063-1.205.14-.227.355-.367.597-.495.155-.078.36-.18.54-.27.18-.09.24-.135.36-.225.119-.091.119-.136.18-.227.06-.09.03-.135-.015-.225-.039-.082-.54-1.32-.738-1.81-.195-.447-.393-.387-.54-.39-.14-.004-.3-.01-.455-.01-.155 0-.405.055-.62.26-.216.204-.825.806-.825 1.97 0 1.16.845 2.285.963 2.44.117.153 1.666 2.54 4.04 3.56 2.372 1.02 2.372.68 2.8.64.43-.04 1.37-.56 1.562-1.103.194-.543.194-1.008.135-1.103z"/></svg>
-        </a>
-        <!-- LinkedIn -->
-        <a href="#" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24"><path d="M4.984 3.5c0 1.381-1.114 2.5-2.484 2.5S0 4.881 0 3.5 1.114 1 2.5 1 4.984 2.12 4.984 3.5zM.5 7h4.973v14H.5V7zM7.521 7h4.773v1.96h.068c.664-1.256 2.287-2.588 4.708-2.588 5.036 0 5.96 3.315 5.96 7.615V21h-5V15.996c0-1.239-.026-2.838-1.73-2.838-1.732 0-2 1.354-2 2.75V21h-5.013V7z"/></svg>
-        </a>
-        <!-- Instagram -->
-        <a href="#" aria-label="Instagram">
-            <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.353 3.608 1.328.975.975 1.267 2.243 1.328 3.608.058 1.266.07 1.645.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.353 2.633-1.328 3.608-.975.975-2.243 1.267-3.608 1.328-1.266.058-1.645.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.353-3.608-1.328-.975-.975-1.267-2.243-1.328-3.608-.058-1.266-.07-1.645-.07-4.85s.012-3.584.07-4.85c.062-1.366.353-2.633 1.328-3.608C4.518 2.586 5.785 2.294 7.15 2.232 8.416 2.175 8.796 2.163 12 2.163m0-2.163C8.741 0 8.332.014 7.052.072 5.577.134 4.216.455 3.092 1.58 1.968 2.703 1.646 4.065 1.58 5.54.99 6.142.88 7.812.88 12c0 4.19.109 5.857.7 6.458.066 1.477.388 2.838 1.512 3.961 1.123 1.123 2.486 1.445 3.96 1.512.6.59 2.27.7 6.458.7s5.858-.11 6.458-.7c1.475-.066 2.838-.388 3.96-1.512 1.123-1.123 1.446-2.484 1.512-3.96.588-.6.697-2.27.697-6.457s-.11-5.857-.698-6.458c-.065-1.476-.388-2.837-1.512-3.96-1.123-1.123-2.486-1.445-3.96-1.512C17.857.014 17.448 0 14.189 0h-4.379z"/></svg>
-        </a>
-    </div>
+    <a href="#" class="whatsapp" aria-label="WhatsApp">
+        <img src="imagenes/whatsapp.svg" alt="WhatsApp">
+    </a>
+    <a href="#" class="linkedin" aria-label="LinkedIn">
+        <img src="imagenes/linkedin.svg" alt="LinkedIn">
+    </a>
+    <a href="#" class="instagram" aria-label="Instagram">
+        <img src="imagenes/instagram.svg" alt="Instagram">
+    </a>
+</div>
+
 </footer>
 
 </body>
