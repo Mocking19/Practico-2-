@@ -91,7 +91,7 @@
     }
 
     h2.text-primary {
-      color: var(--boreal-acento) !important;
+      color: var(--boreal-azul) !important;
     }
 
     img.rounded.shadow {
@@ -99,30 +99,32 @@
     }
 
     .features .feature-item {
-      background-color: #f4f9fb;
+      background-color: var(--boreal-azul);
+      color: var(--boreal-blanco);
       border-radius: 10px;
       padding: 10px 15px;
       display: flex;
       align-items: center;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       transition: transform 0.2s ease, background-color 0.3s ease;
     }
 
     .feature-item:hover {
       transform: translateY(-3px);
-      background-color: #e9f4f8;
+      background-color: #0c3455; /* tono más oscuro al pasar el mouse */
     }
 
     .feature-item i {
-      color: var(--boreal-acento);
+      color: var(--boreal-blanco);
       font-size: 1.3rem;
       margin-right: 10px;
     }
 
     .feature-item span {
       font-weight: 500;
-      color: #333;
+      color: var(--boreal-blanco);
     }
+
 
     footer {
       background-color: var(--boreal-azul);
@@ -236,13 +238,13 @@
       <div class="col-md-6">
         <h2 class="fw-bold mb-3 text-primary">Suite "Aurora Boreal"</h2>
         <p>Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.</p>
-        <strong>Incluye:</strong>
         <div class="row g-2 features">
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-water"></i><span>Jacuzzi interior con vista panorámica</span></div></div>
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-fire"></i><span>Sala de estar con chimenea moderna</span></div></div>
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-star"></i><span>Amenities premium</span></div></div>
-          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-cup-hot"></i><span>Mini bar y servicio a la habitación</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-cup-hot"></i><span>Mini bar en habitación</span></div></div>
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-heart"></i><span>Cena de bienvenida incluida</span></div></div>
+          <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-egg-fried"></i><span>Desayuno casero incluido</span></div></div>
         </div>
       </div>
     </section>
@@ -254,7 +256,6 @@
       <div class="col-md-6">
         <h2 class="fw-bold mb-3 text-primary">Habitación Rústica "Pino Blanco"</h2>
         <p>Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.</p>
-        <strong>Incluye:</strong>
         <div class="row g-2 features">
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-fire"></i><span>Chimenea tradicional</span></div></div>
           <div class="col-12 col-sm-6"><div class="feature-item"><i class="bi bi-tree"></i><span>Vista al bosque nevado</span></div></div>
