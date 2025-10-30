@@ -68,7 +68,7 @@
 
       .header-text h1 {
         font-size: 52px;
-        color: var(--boreal-celeste);
+        color: var(--boreal-blanco);
       }
 
       .header-text p {
@@ -273,7 +273,7 @@
     }
 
       button.btn:hover {
-      background: linear-gradient(135deg, #547bba, #2f58ec); /* hover igual al del footer */
+      background: linear-gradient(135deg, #547bba, #2f58ec); 
       transform: translateY(-3px);
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
     }

@@ -67,7 +67,7 @@
 
     .header-text h1 {
       font-size: 52px;
-      color: var(--boreal-celeste);
+      color: var(--boreal-blanco)
     }
 
     .header-text p {
@@ -99,9 +99,9 @@
     }
 
     .carousel-item img {
-      height: 500px;          /* Ajustá este valor al alto que quieras */
-      object-fit: cover;      /* Hace que la imagen llene el espacio sin deformarse */
-      object-position: center; /* Centra la imagen dentro del recorte */
+      height: 500px;          
+      object-fit: cover;      
+      object-position: center; 
     }
 
     section.bg-light {
