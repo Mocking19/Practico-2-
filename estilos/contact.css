@@ -13,7 +13,7 @@
 
       /* Header con overlay */
       header {
-        background: url("../imagenes/banner.jpg") no-repeat center 70% / cover;
+        background: var(--boreal-azul);
         height: 300px;
         position: relative;
         color: rgb(233, 233, 233);

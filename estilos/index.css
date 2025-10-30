@@ -12,7 +12,7 @@
     }
 
     header {
-      background: url('../imagenes/banner.jpg') no-repeat center 70% / cover;
+      background: var(--boreal-azul) no-repeat center 70% / cover;
       height: 300px;
       position: relative;
       color: rgb(233, 233, 233);
