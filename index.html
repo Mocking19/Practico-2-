@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="./estilos/index.css" />
 
   <link rel="icon" href="./imagenes/logo.png" type="image/png">
+
 </head>
 <body>
 
@@ -150,25 +151,6 @@
     </div>
   </div>
 
-  <!-- Script de validación -->
-  <script>
-  document.getElementById('checkAvailability').addEventListener('click', function() {
-    const sede = document.getElementById('sede').value;
-    const llegada = document.getElementById('arrival').value;
-    const salida = document.getElementById('departure').value;
-    const rooms = document.getElementById('rooms').value;
-    const adults = document.getElementById('adults').value;
-    const children = document.getElementById('children').value;
-
-    if (sede && llegada && salida && rooms && adults && children !== '') {
-      const modal = new bootstrap.Modal(document.getElementById('availabilityModal'));
-      modal.show();
-    } else {
-      alert('Por favor, complete todos los campos antes de continuar.');
-    }
-  });
-  </script>
-
   <!-- Main content -->
   <main class="container my-5">
     <section class="row align-items-center mb-5">
@@ -206,8 +188,50 @@
     </section>
   </main>
 
-  <!-- Footer -->
-  <footer class="py-3 px-4">
+<section class="container my-5" id="destinos">
+  <h2 class="text-center fw-bold mb-4 text-primary">Nuestros destinos</h2>
+  <div class="row g-4">
+
+    <!-- Bariloche -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 shadow-lg border-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12020.291415892447!2d-71.31293640126108!3d-41.13293552758677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7b64b4c3fe17%3A0x6ef6636cd39eaf56!2sAv.%2012%20de%20Octubre%20999-1099%2C%20R8400%20San%20Carlos%20de%20Bariloche%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2sar!4v1761856855636!5m2!1ses!2sar"
+          class="card-img-top" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">Bariloche</h5>
+          <p class="card-text mb-0"><i class="bi bi-telephone-fill me-2"></i>+54 294 442-0001</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ushuaia -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 shadow-lg border-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9189.90096808814!2d-68.39236660606048!3d-54.8419027009132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xbc4c24882e010d31%3A0xaa0bebb560b447ef!2sDe%20la%20Ermita%203609%2C%20V9410%20Ushuaia%2C%20Tierra%20del%20Fuego!5e0!3m2!1ses!2sar!4v1761856913754!5m2!1ses!2sar"
+          class="card-img-top" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">Ushuaia</h5>
+          <p class="card-text mb-0"><i class="bi bi-telephone-fill me-2"></i>+54 2901 431-222</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- San Martín de los Andes -->
+    <div class="col-12 col-md-4">
+      <div class="card h-100 shadow-lg border-0">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12196.309662686192!2d-71.37529090718348!3d-40.16283003520024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96110e6d66a8288b%3A0x10a2bbc4b752a950!2sJuez%20del%20Valle%201174-1100%2C%20Q8370%20San%20Mart%C3%ADn%20de%20los%20Andes%2C%20Neuqu%C3%A9n!5e0!3m2!1ses!2sar!4v1761856978421!5m2!1ses!2sar"
+          class="card-img-top" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="card-body text-center">
+          <h5 class="card-title fw-bold text-primary">San Martín de los Andes</h5>
+          <p class="card-text mb-0"><i class="bi bi-telephone-fill me-2"></i>+54 2972 427-889</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="py-3 px-4">
     <div class="container">
       <div class="row text-center text-md-start align-items-center">
         <div class="col-md-8 footer-text mb-2 mb-md-0">
@@ -221,6 +245,7 @@
       </div>
     </div>
   </footer>
+  <script src="scripts/index.js"></script>
 
 </body>
 </html>

@@ -161,6 +161,21 @@
       filter: invert(79%) sepia(21%) saturate(400%) hue-rotate(160deg) brightness(102%) contrast(97%);
     }
 
+
+    #destinos iframe {
+      border-radius: 12px 12px 0 0;
+    }
+
+    #destinos .card {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    #destinos .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+
     /* RESPONSIVE */
     @media (max-width: 767.98px) {
       header {
