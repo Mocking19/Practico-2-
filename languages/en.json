@@ -1,0 +1,108 @@
+{
+  "navBar": {
+    "home": "HOME",
+    "rooms": "SERVICES",
+    "locations": "ABOUT US",
+    "contact": "CONTACT"
+  },
+  "header": {
+    "title": "Hotel Boreal",
+    "description": "A place that combines warmth, elegance, and nature in cold landscapes. Offering comfort, tranquility, and unique scenery in a modern and cozy atmosphere."
+  },
+  "carrousel": {
+    "slide1": {
+      "title": "Welcome to Hotel Boreal",
+      "subtitle": "A warm refuge in the heart of snowy nature."
+    },
+    "slide2": {
+      "title": "Experts in cold climates",
+      "subtitle": "We are located in the best tourist destinations."
+    },
+    "slide3": {
+      "title": "Luxury suites",
+      "subtitle": "Comfort and elegance with a view of the snowy forest."
+    },
+    "slide4": {
+      "title": "Spa and wellness",
+      "subtitle": "Total relaxation with premium treatments."
+    }
+  },
+  "formularioDisponibilidad": {
+    "sedeLabel": "Location",
+    "sedePlaceholder": "Choose a location...",
+    "arrivalLabel": "Arrival",
+    "departureLabel": "Departure",
+    "roomsLabel": "Rooms",
+    "adultsLabel": "Adults",
+    "childrenLabel": "Children",
+    "button": "Let's Check availability"
+  },
+  "modalDisponibilidad": {
+    "title": "Availability confirmed",
+    "message": "🎉 We have availability for the selected dates!",
+    "button": "OK"
+  },
+  "habitaciones": {
+    "suiteAurora": {
+      "title": "Suite \"Aurora Boreal\"",
+      "description": "Spacious and elegant suite with a contemporary mountain-inspired design. Includes a king-size bed, jacuzzi with forest view, fireplace, private lounge, and premium amenities. Perfect for couples and special occasions.",
+      "features": [
+        "Indoor jacuzzi with panoramic view",
+        "Living area with modern fireplace",
+        "Premium amenities",
+        "In-room minibar",
+        "Welcome dinner included",
+        "Breakfast included"
+      ]
+    },
+    "pinoBlanco": {
+      "title": "Rustic Room \"White Pine\"",
+      "description": "Cozy and handcrafted, ideal for couples or solo travelers. Offers a queen-size bed, stone fireplace, private bathroom, and panoramic window overlooking the snowy forest.",
+      "features": [
+        "Traditional fireplace",
+        "View of the snowy forest",
+        "Central heating",
+        "Breakfast included"
+      ]
+    }
+  },
+  "destinos": {
+    "titulo": "Our Destinations",
+    "sedes": {
+      "bariloche": {
+        "nombre": "Bariloche",
+        "telefono": "+54 294 442-0001"
+      },
+      "ushuaia": {
+        "nombre": "Ushuaia",
+        "telefono": "+54 2901 431-222"
+      },
+      "sanMartin": {
+        "nombre": "San Martín de los Andes",
+        "telefono": "+54 2972 427-889"
+      }
+    }
+  },
+  "footer": {
+    "texto": "By using this website, you agree to the use of cookies. Cookie Policy | Terms and Conditions | Privacy Policy | Cache: 2025-09-18 20:31:31 | Texts | Framework: 3 |",
+    "social": {
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+
+"archivo2":{
+  "nombre":"contact.html"
+},
+
+  "form":{ 
+    "title": "Contact us", 
+    "nameLabel": "First and Last Name", 
+    "emailLabel": "Email", 
+    "messageLabel": "Phone", 
+    "consulta": "Message", 
+    "offers": "Receive exclusive offers and discounts", 
+    "button": "Send" 
+  }
+}

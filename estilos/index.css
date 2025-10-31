@@ -6,7 +6,7 @@
     }
 
     body {
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: "Segoe UI", Arial, sans-serif ;
       color: #000;
       background-color: #f7f9fb;
     }
@@ -46,6 +46,18 @@
 
     .navbar-nav .nav-link:hover {
       text-decoration: underline;
+    }
+
+    .languages{
+      display: flex;
+      gap: .5rem;
+    }
+
+    .langB{
+      background-color: transparent;
+      font-size: 1rem;
+      border: none;
+      cursor: pointer;
     }
 
     .header-content {
