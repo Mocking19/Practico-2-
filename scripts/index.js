@@ -10,8 +10,7 @@ langbuttons.forEach((button) => {
           const section = element.dataset.section;  // ej: carrouselHeader
           const value = element.dataset.value;      // ej: slide1.title
 
-          // Nueva forma de acceder con niveles anidados
-          const keys = value.split("."); // ["slide1", "title"]
+          const keys = value.split(".");
           let text = data[section];
           keys.forEach(k => {
             if (text && typeof text === "object") {
@@ -19,7 +18,6 @@ langbuttons.forEach((button) => {
             }
           });
 
-          // Solo reemplaza si encontró el texto
           if (text) {
             element.innerHTML = text;
           } else {
