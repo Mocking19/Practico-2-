@@ -1,0 +1,117 @@
+{
+  "archivo1":{
+  "nombre":"index.html"
+},
+
+  "navBar": {
+    "home": "INICIO",
+    "rooms": "SERVICIOS",
+    "locations": "NOSOTROS",
+    "contact": "CONTACTO"
+  },
+  "header": {
+    "title": "Hotel Boreal",
+    "description": "Un lugar que combina calidez, elegancia y naturaleza en escenarios fríos. Ofrece comodidad, tranquilidad y paisajes únicos en un ambiente moderno y acogedor."
+  },
+  "carrousel": {
+    "slide1": {
+      "title": "Bienvenido al Hotel Boreal",
+      "subtitle": "Un refugio de calidez en medio de la naturaleza nevada."
+    },
+    "slide2": {
+      "title": "Especialistas en climas fríos",
+      "subtitle": "Nos encontramos en los mejores destinos turísticos."
+    },
+    "slide3": {
+      "title": "Suites de lujo",
+      "subtitle": "Comodidad y elegancia con vista al bosque nevado."
+    },
+    "slide4": {
+      "title": "Spa y bienestar",
+      "subtitle": "Relajación total con tratamientos premium."
+    }
+  },
+  "formularioDisponibilidad": {
+    "sedeLabel": "Sede",
+    "sedePlaceholder": "Elija una sede...",
+    "arrivalLabel": "Llegada",
+    "departureLabel": "Salida",
+    "roomsLabel": "Cantidad",
+    "adultsLabel": "Adultos",
+    "childrenLabel": "Niños",
+    "button": "Consultar disponibilidad"
+  },
+  "modalDisponibilidad": {
+    "title": "Disponibilidad confirmada",
+    "message": "🎉 ¡Tenemos disponibilidad para las fechas seleccionadas!",
+    "button": "Aceptar"
+  },
+  "habitaciones": {
+    "suiteAurora": {
+      "title": "Suite \"Aurora Boreal\"",
+      "description": "Suite amplia y elegante con diseño contemporáneo y detalles de montaña. Incluye cama king-size, jacuzzi con vista al bosque, chimenea, sala privada y amenities premium. Ideal para parejas y ocasiones especiales.",
+      "features": [
+        "Jacuzzi interior con vista panorámica",
+        "Sala de estar con chimenea moderna",
+        "Amenities premium",
+        "Mini bar en habitación",
+        "Cena de bienvenida incluida",
+        "Desayuno casero incluido"
+      ]
+    },
+    "pinoBlanco": {
+      "title": "Habitación Rústica \"Pino Blanco\"",
+      "description": "Acogedora y artesanal, ideal para parejas o viajeros solitarios. Ofrece cama queen-size, chimenea de piedra, baño privado y ventana panorámica con vista al bosque nevado.",
+      "features": [
+        "Chimenea tradicional",
+        "Vista al bosque nevado",
+        "Calefacción central",
+        "Desayuno casero incluido"
+      ]
+    }
+  },
+  "destinos": {
+    "titulo": "Nuestros destinos",
+    "sedes": {
+      "bariloche": {
+        "nombre": "Bariloche",
+        "telefono": "+54 294 442-0001"
+      },
+      "ushuaia": {
+        "nombre": "Ushuaia",
+        "telefono": "+54 2901 431-222"
+      },
+      "sanMartin": {
+        "nombre": "San Martín de los Andes",
+        "telefono": "+54 2972 427-889"
+      }
+    }
+  },
+  "footer": {
+    "texto": "Al utilizar este sitio web, acepta el uso de cookies. Política de cookies | Términos y condiciones | Política de privacidad | Cache: 2025-09-18 20:31:31 | Textos | Framework: 3 |",
+    "social": {
+      "whatsapp": "WhatsApp",
+      "linkedin": "LinkedIn",
+      "instagram": "Instagram"
+    }
+  },
+
+
+"archivo2":{
+  "nombre":"contact.html"
+},
+
+"form":{
+    "title": "Contáctanos",
+    "nameLabel": "Nombre y Apellido",
+    "emailLabel": "Correo Electrónico",
+    "messageLabel": "Teléfono",
+    "consulta": "Consulta",
+    "offers": "Recibir ofertas exclusivas y descuentos",
+    "button": "Enviar"
+}
+
+
+
+
+}
