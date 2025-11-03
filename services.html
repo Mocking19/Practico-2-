@@ -55,19 +55,104 @@
     </div>
   </nav>
 
-  <!-- Main content -->
   <main>
-  <div class="position-relative overflow-hidden p-3 p-md-3 m-md-5 text-center bg-transparent">
-  <div class="col-md-6 p-lg-5 mx-auto my-5">
-    <h1 class="display-4 fw-bold">Nuestros Servicios</h1>
-    <h3 class="fw-normal mb-3">Conoce lo que ofrecemos</h3>
+<div class="container my-5 servicios-container">
+  <div class="text-center mb-5">
+    <h1 class="display-5 fw-bold text-white" data-section="bannerServicios" data-value="title">Nuestros Servicios</h1>
+    <p class="text-light" data-section="bannerServicios" data-value="description">Explora todo lo que el Hotel Boreal tiene para ofrecerte</p>
   </div>
 
+  <ul class="nav nav-tabs justify-content-center" id="serviceTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="comodidades-tab" data-bs-toggle="tab" data-bs-target="#comodidades" type="button" role="tab" data-section="tabServicios" data-value="comodidades.title">Comodidades</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="salud-tab" data-bs-toggle="tab" data-bs-target="#salud" type="button" role="tab" data-section="tabServicios" data-value="salud.title">Salud y Bienestar</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="entretenimiento-tab" data-bs-toggle="tab" data-bs-target="#entretenimiento" type="button" role="tab" data-section="tabServicios" data-value="entretenimiento.title">Entretenimiento</button>
+    </li>
+  </ul>
 
+  <div class="tab-content mt-4" id="serviceTabsContent">
+    <div class="tab-pane fade show active" id="comodidades" role="tabpanel">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="imagenes/pino.jpg" class="img-fluid rounded shadow-sm" alt="Habitación">
+        </div>
+        <div class="col-md-6 text-start text-light">
+          <h3 class="fw-bold text-acento" data-section="tabServicios" data-value="comodidades.title">Comodidades</h3>
+          <p data-section="tabServicios" data-value="comodidades.subtitle">Espacios diseñados para tu confort y descanso, con detalles que marcan la diferencia.</p>
+          <ul>
+            <li data-section="tabServicios" data-value="comodidades.features.0">Wi-Fi de alta velocidad</li>
+            <li data-section="tabServicios" data-value="comodidades.features.1">Limpieza diaria</li>
+            <li data-section="tabServicios" data-value="comodidades.features.2">Room service 24h</li>
+            <li data-section="tabServicios" data-value="comodidades.features.3">Buffet libre</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="galeria mt-4">
+        <img src="imagenes/limpieza.jpg" alt="Habitación doble">
+        <img src="imagenes/roooms.jpg" alt="Habitación simple">
+        <img src="imagenes/buffet.jpg" alt="Suite premium">
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="salud" role="tabpanel">
+      <div class="row g-4">
+        <div class="col-md-6 order-md-2">
+          <img src="imagenes/spa.jpg" class="img-fluid rounded shadow-sm" alt="Spa">
+        </div>
+        <div class="col-md-6 text-start text-light order-md-1">
+          <h3 class="fw-bold text-acento" data-section="tabServicios" data-value="salud.title">Salud y Bienestar</h3>
+          <p data-section="tabServicios" data-value="salud.subtitle">Relajación, energía y bienestar para cuerpo y mente en nuestras modernas instalaciones.</p>
+          <ul>
+            <li data-section="tabServicios" data-value="salud.features.0">Spa & Sauna</li>
+            <li data-section="tabServicios" data-value="salud.features.1">Gimnasio totalmente equipado</li>
+            <li data-section="tabServicios" data-value="salud.features.2">Masajes terapéuticos</li>
+            <li data-section="tabServicios" data-value="salud.features.3">Piscina climatizada</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="galeria mt-4">
+        <img src="imagenes/gimnasio.jpg" alt="Gimnasio del hotel">
+        <img src="imagenes/piscina.jpg" alt="Piscina climatizada">
+        <img src="imagenes/masajes.jpg" alt="Masajes terapéuticos">
+      </div>
+    </div>
+
+    <div class="tab-pane fade" id="entretenimiento" role="tabpanel">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <img src="imagenes/bar.jpg" class="img-fluid rounded shadow-sm" alt="Entretenimiento">
+        </div>
+        <div class="col-md-6 text-start text-light">
+          <h3 class="fw-bold text-acento" data-section="tabServicios" data-value="entretenimiento.title">Entretenimiento</h3>
+          <p data-section="tabServicios" data-value="entretenimiento.subtitle">Diversión y experiencias inolvidables para todas las edades.</p>
+          <ul>
+            <li data-section="tabServicios" data-value="entretenimiento.features.0">Bar y salón lounge</li>
+            <li data-section="tabServicios" data-value="entretenimiento.features.1">Eventos en vivo</li>
+            <li data-section="tabServicios" data-value="entretenimiento.features.2">Excursiones guiadas</li>
+            <li data-section="tabServicios" data-value="entretenimiento.features.3">Juegos y actividades</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="galeria mt-4">
+        <img src="imagenes/evento.jpg" alt="Bar del hotel">
+        <img src="imagenes/excursion.jpg" alt="Evento en vivo">
+        <img src="imagenes/juegos.jpg" alt="Excursiones guiadas">
+      </div>
+    </div>
+  </div>
 </div>
+
   </main>
 
-  <!-- Footer -->
+
+
   <footer class="py-3 px-4">
     <div class="container">
       <div class="row text-center text-md-start align-items-center">
@@ -86,6 +171,7 @@
   </footer>
 
   <script src="scripts/index.js"></script>
+
 </body>
 
 </html>

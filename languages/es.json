@@ -109,9 +109,45 @@
     "consulta": "Consulta",
     "offers": "Recibir ofertas exclusivas y descuentos",
     "button": "Enviar"
-}
+},
 
+"bannerServicios":{
+    "title": "Nuestros Servicios",
+    "description": "Explora todo lo que el Hotel Boreal tiene para ofrecerte"
+  },
 
+"tabServicios":{
+    "comodidades": {
+      "title": "Comodidades",
+      "subtitle": "Espacios diseñados para tu confort y descanso, con detalles que marcan la diferencia",
+      "features": [
+        "Wi-Fi de alta velocidad",
+        "Limpieza diaria",
+        "Room service 24h",
+        "Buffet libre"
+      ]
+    },
 
+    "salud": {
+      "title": "Salud y Bienestar",
+      "subtitle": "Relajación, energía y bienestar para cuerpo y mente en nuestras modernas instalaciones",
+      "features": [
+        "Spa & Sauna",
+        "Gimnasio totalmente equipado",
+        "Masajes terapéuticos",
+        "Piscina climatizada"
+      ]
+    },
+    "entretenimiento": {
+      "title": "Entretenimiento",
+      "subtitle": "Diversión y experiencias inolvidables para todas las edades",
+      "features": [
+        "Bar y salón lounge",
+        "Eventos en vivo",
+        "Excursiones guiadas",
+        "Juegos y actividades"
+      ]
+    }
+  }
 
 }

@@ -104,5 +104,47 @@
     "consulta": "Message", 
     "offers": "Receive exclusive offers and discounts", 
     "button": "Send" 
+  },
+
+
+"bannerServicios": {
+  "title": "Our Services",
+  "description": "Explore everything that Hotel Boreal has to offer you"
+},
+
+"tabServicios": {
+  "comodidades": {
+    "title": "Amenities",
+    "subtitle": "Spaces designed for your comfort and relaxation, with details that make the difference",
+    "features": [
+      "High-speed Wi-Fi",
+      "Daily cleaning",
+      "24-hour room service",
+      "Buffet service"
+    ]
+  },
+
+  "salud": {
+    "title": "Health & Wellness",
+    "subtitle": "Relaxation, energy, and well-being for body and mind in our modern facilities",
+    "features": [
+      "Spa & Sauna",
+      "Fully equipped gym",
+      "Therapeutic massages",
+      "Heated pool"
+    ]
+  },
+
+  "entretenimiento": {
+    "title": "Entertainment",
+    "subtitle": "Fun and unforgettable experiences for all ages",
+    "features": [
+      "Bar and lounge",
+      "Live events",
+      "Guided excursions",
+      "Games and activities"
+    ]
   }
+}
+
 }
