@@ -142,43 +142,44 @@ footer {
 }
 
 /* ---- FORMULARIO ---- */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
 form {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-radius: 20px;
-  width: 500px;
-  height: auto;
+  width: 70vw;
+  height: 600px;
   padding: 30px;
-  background-color: #ffffff;
+  background-color: white;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* ---- CONTENEDOR PRINCIPAL ---- */
-.container-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  gap: 20px;
-}
-
-/* ---- TÍTULO ---- */
-.container-form h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
-  text-align: center;
-}
-
 /* ---- BLOQUES DEL FORMULARIO ---- */
-.mb-3 {
-  width: 100%;
+form .mb-3 {
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+/* ---- TÍTULO ---- */
+.mb-3 .h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
 }
 
 /* ---- INPUT CON ÍCONO ---- */
@@ -186,11 +187,11 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 90%;
   background-color: #f3f6fa;
   border: 1px solid #d1d9e6;
   border-radius: 10px;
   padding: 10px 15px;
-  width: 90%;
   transition: all 0.3s ease;
 }
 
@@ -220,41 +221,41 @@ form {
 }
 
 /* ---- TEXTAREA ---- */
+
 .container-input-textarea1 {
-  width: 90%;
   display: flex;
-  flex-direction: column;
   align-items: center;
-}
-
-.container-input-textarea1 label {
-  align-self: flex-start;
-  margin-bottom: 5px;
-  color: #555;
-  font-weight: 500;
-}
-
-textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 10px;
+  justify-content: center;
+  width: 90%;
+  padding: 10px 15px;
   border: 1px solid #d1d9e6;
+  border-radius: 10px;
   background-color: #f3f6fa;
-  font-size: 16px;
-  resize: none;
   transition: all 0.3s ease;
 }
 
-textarea:focus {
+.container-input-textarea1:hover {
   border-color: #74ebd5;
-  box-shadow: 0 0 8px rgba(116, 235, 213, 0.4);
+  box-shadow: 0 0 8px rgba(116, 235, 213, 0.5);
+}
+
+.container-input-textarea1 textarea {
+  flex: 1;
+  border: none;
   outline: none;
+  background: transparent;
+  font-size: 16px;
+  color: #333;
+  resize: none;
+}
+
+.container-input-textarea1 textarea::placeholder {
+  color: #aaa;
 }
 
 /* ---- CHECKBOX Y BOTÓN ---- */
 .form-check {
   display: flex;
-  flex-direction: column;
   align-items: center;
   gap: 10px;
   width: 100%;
@@ -283,6 +284,8 @@ button.btn:hover {
   transform: translateY(-3px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
+
+
 
 /* RESPONSIVE */
 @media (max-width: 767.98px) {
@@ -321,6 +324,10 @@ button.btn:hover {
     flex: 1 1 100%;
   }
 
+  .form-check {
+    flex-direction: column;
+  }
+
   footer .footer-text {
     text-align: center !important;
     margin-bottom: 1rem;
@@ -332,12 +339,21 @@ button.btn:hover {
 }
 
 @media (max-width: 600px) {
+
   form {
+    width: 90vw;
+    padding: 10px;
+  }
+
+  .mb-3 {
     width: 90%;
-    padding: 20px;
   }
 
   .container-input {
+    width: 100%;
+  }
+
+  .container-input-textarea1{
     width: 100%;
   }
 
