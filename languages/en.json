@@ -145,6 +145,17 @@
       "Games and activities"
     ]
   }
-}
+},
+
+  "about": {
+    "description": "Hotel Boreal was born more than a decade ago, inspired by the desire to create a warm refuge in the midst of the cold and majestic climate of our region. Its founder, a passionate traveler in love with the mountains, dreamed of a place where visitors could enjoy the silence, nature and warmth of a home away from home. Since then, Boreal has maintained its essence: combining traditional hospitality with modern comfort, offering unique experiences in each stay. Every corner of the hotel was designed to convey serenity, from the rooms overlooking the snowy landscape, to the common spaces where fire and wood create a cozy atmosphere. Today, Hotel Boreal continues to be a meeting point for those seeking rest, nature and the pleasure of feeling truly well received.",
+    "amenities": [
+      "Privileged location",
+      "Warm environments",
+      "Comfort and rest",
+      "Connection with nature",
+      "Hot drinks to start the day with energy."
+    ]
+  }
 
 }
