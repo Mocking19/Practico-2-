@@ -33,7 +33,6 @@ header::before {
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -145,15 +144,39 @@ footer {
 
 /*--CONTENIDO--*/
 
-.container-text-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  padding: 0 15px;
+.container-us-1 {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+}
+
+.container-img-us {}
+
+
+.image-staff-us {
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+}
+
+.container-tex-us {
+  position: relative;
+  top: 30px;
+  background-color: #000;
+  opacity: 0.8;
+  padding: 30px;
+  width: 60vw;
+  height: 60vh;
+}
+
+.text-us {
+  color: var(--boreal-blanco);
+  font-size: 1.2rem;
+
 }
 
 .container-items-us {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
