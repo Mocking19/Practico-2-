@@ -3,19 +3,20 @@
   --boreal-celeste: #b1d5db;
   --boreal-blanco: #ffffff;
   --boreal-acento: #6ac2de;
+  --boreal-hueso: #d4d9d2;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
-  color: #000;
-  background-color: #f7f9fb;
+  color: black;
+  background-color: var(--boreal-blanco);
+  overflow-x: hidden;
 }
 
 header {
-  background: var(--boreal-azul) no-repeat center 70% / cover;
   height: 300px;
   position: relative;
-  color: rgb(233, 233, 233);
+  color: var(--boreal-blanco);
   padding-top: 70px;
 }
 
@@ -24,7 +25,7 @@ header::before {
   position: absolute;
   width: 100%;
   height: 300px;
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: var(--boreal-blanco);
   top: 0;
   left: 0;
   z-index: 1;
@@ -33,7 +34,6 @@ header::before {
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 2;
 }
@@ -72,19 +72,14 @@ header::before {
   width: 175px;
   height: 175px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: var(--boreal-azul);
   padding: 4px;
   object-fit: contain;
 }
 
 .header-text h1 {
   font-size: 52px;
-  color: var(--boreal-blanco);
-}
-
-.header-text p {
-  color: #d4e6ea;
-  font-weight: 500;
+  color: var(--boreal-azul);
 }
 
 h2.text-primary {
@@ -145,53 +140,100 @@ footer {
 
 /*--CONTENIDO--*/
 
-.container-text-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 40px;
-  padding: 0 15px;
-}
+/*---image-text---*/
 
-.container-items-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.image-us {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.us-1 {
   width: 100%;
+  height: 700px;
+}
+
+.us-1-img {
+  width: 100%;
+  height: 100%;
+}
+
+.us-1-text {
+  background-color: black;
+  opacity: 0.7;
+  color: var(--boreal-blanco);
+  padding: 50px;
+  margin: 100px;
   border-radius: 15px;
+  font-size: 1rem;
+}
+
+/*---list-image---*/
+
+.hotel-section {
+  padding: 1rem;
+  background-color: var(--boreal-blanco);
+  background-size: cover;
+}
+
+.hotel-feature {
+  width: 100%;
+  padding: 6rem;
+  background-color: var(--boreal-blanco);
+  border-radius: 20px;
+}
+
+.list-group {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .list-group li {
-  background-color: var(--boreal-acento); 
-  color: white; 
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-  transition: all 0.3s ease; 
-  cursor: pointer;
+  position: relative; 
+  margin-bottom: 3rem; 
+  cursor: pointer; 
+  transition: color 0.3s ease, transform 0.3s ease;
+  color: var(--boreal-blanco);
 }
 
 .list-group li:hover {
-  background-color: var(--boreal-azul);
-  transform: translateY(-5px);
+  color: #6ac2de;
+  transform:  translateX(10px);
 }
 
-.list-group-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin: 10px;
-  gap: 15px;
+.list-group li img {
+  position: absolute;
+  right: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  max-width:400px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+.list-group li:hover img {
+  opacity: 1;
+}
+
+li span {
+  width: 10%;
+  border-radius: 15px;
+  background-color: var(--boreal-azul);
+  border: 5px var(--boreal-hueso) solid;
+  padding: 10px;
+  font-size: 1rem;
+  position: relative;
+  line-height: 2.5;
+  transition: border 0.3s ease;
+}
+
+li span:hover {
+  border: 5px var(--boreal-acento) solid;
 }
 
 /* RESPONSIVE */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
   header {
     height: auto;
     padding-bottom: 20px;
@@ -243,15 +285,31 @@ footer {
   footer .social-icons {
     justify-content: center !important;
   }
+
+  .list-group li img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    opacity: 1; /* siempre visible en móviles */
+    transform: none;
+  }
+
+  .list-group li {
+    transform: none !important;
+  }
+
 }
 
 @media (max-width: 600px) {
-  .container-text-us .row {
-    flex-direction: column;
+  header {
+    height: auto;
+    padding-bottom: 20px;
+    text-align: center;
   }
 
-  .image-us {
-    border-radius: 0px;
+  .us-1 {
+    position: static;
   }
-
 }

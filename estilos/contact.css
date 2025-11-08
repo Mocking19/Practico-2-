@@ -3,15 +3,15 @@
   --boreal-celeste: #b1d5db;
   --boreal-blanco: #ffffff;
   --boreal-acento: #6ac2de;
+  --boreal-hueso: #d4d9d2;
 }
 
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   color: #000;
-  background-color: #f7f9fb;
+  background-color: var(--boreal-blanco);
 }
 
-/* Header con overlay */
 header {
   background: var(--boreal-azul);
   height: 300px;
@@ -141,33 +141,43 @@ footer {
   filter: invert(79%) sepia(21%) saturate(400%) hue-rotate(160deg) brightness(102%) contrast(97%);
 }
 
-/* ---- FORMULARIO ---- */
-
 main {
   display: flex;
-  justify-content: center;
+  justify-content: center;  
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  position: relative;
 }
+
+.image-backgroud-us {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+
+/* ---- FORMULARIO ---- */
 
 form {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-radius: 20px;
-  width: 70vw;
-  height: 600px;
-  padding: 30px;
-  background-color: white;
+  width: 80vw;
+  height: auto;
+  background-color: var(--boreal-blanco);
+  opacity: 0.8;
+  border-radius: 15px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
 /* ---- BLOQUES DEL FORMULARIO ---- */
 form .mb-3 {
-  width: 70%;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -175,9 +185,10 @@ form .mb-3 {
 }
 
 /* ---- TÍTULO ---- */
-.mb-3 .h2 {
-  font-size: 24px;
-  color: #333;
+form h2 {
+  font-size: 30px;
+  color: var(--boreal-azul);
+  margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -285,7 +296,62 @@ button.btn:hover {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
+/*---- banner cards ----*/
 
+.container-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: auto;
+  background-color: transparent;
+  margin: 10px;
+}
+
+.container-banner .row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+}
+
+.col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  height: 50vh;
+  border: none;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 50%;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+  padding: 15px;
+  text-align: center;
+  background-color: var(--boreal-blanco);
+  border-radius: 0 0 15px 15px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
 
 /* RESPONSIVE */
 @media (max-width: 767.98px) {
@@ -326,6 +392,28 @@ button.btn:hover {
 
   .form-check {
     flex-direction: column;
+  }
+
+  /*---- banner cards ----*/
+
+  .container-banner {
+
+  }
+
+  .row {
+
+  }
+
+  .col {
+    
+  }
+
+  .card {
+
+  }
+
+  .card-img-top {
+
   }
 
   footer .footer-text {
