@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Noto Sans", Arial, sans-serif;
   color: #000;
   background-color: var(--boreal-blanco);
 }
@@ -394,27 +394,6 @@ button.btn:hover {
     flex-direction: column;
   }
 
-  /*---- banner cards ----*/
-
-  .container-banner {
-
-  }
-
-  .row {
-
-  }
-
-  .col {
-    
-  }
-
-  .card {
-
-  }
-
-  .card-img-top {
-
-  }
 
   footer .footer-text {
     text-align: center !important;
