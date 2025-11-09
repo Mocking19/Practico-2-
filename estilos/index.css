@@ -11,6 +11,11 @@
       background-color: #f7f9fb;
     }
 
+    body h1{
+      font-size: 10px;
+    }
+
+
     header {
       background: var(--boreal-azul) no-repeat center 70% / cover;
       height: 300px;
