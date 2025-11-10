@@ -321,6 +321,10 @@ li span:hover {
     font-size: 0.8rem
   }
 
+  .hotel-feature {
+    padding: 0;
+  }
+
   li span {
   font-size: 0.8rem;
 }
