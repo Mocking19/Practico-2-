@@ -269,12 +269,10 @@ li span:hover {
     flex: 1 1 100%;
   }
 
-  .container-items-us .row {
-    flex-direction: column;
-  }
-
-  .image-us {
-    border-radius: 0px;
+  .us-1-text {
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    font-size: 1rem;
   }
 
   footer .footer-text {
@@ -309,7 +307,24 @@ li span:hover {
     text-align: center;
   }
 
-  .us-1 {
-    position: static;
+  .us-1{
+    margin: 0;
+    padding: 0;
   }
+
+  .us-1-img {
+    margin: 0;
+    padding: 0;
+    }
+  
+  .us-1-text {
+    font-size: 0.8rem
+  }
+
+  li span {
+  font-size: 0.8rem;
+}
+
+
+
 }
