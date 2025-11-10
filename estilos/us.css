@@ -202,7 +202,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  max-width:400px;
+  max-width:500px;
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
@@ -233,6 +233,18 @@ li span:hover {
 }
 
 /* RESPONSIVE */
+
+@media (max-width: 992px) {
+  .list-group li img {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    opacity: 0;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     height: auto;
@@ -269,10 +281,22 @@ li span:hover {
     flex: 1 1 100%;
   }
 
+  .us-1 { 
+    height: 500px;
+  }
+
   .us-1-text {
     padding: 10px;
     margin: 0 10px 0 10px;
     font-size: 1rem;
+  }
+
+  .hotel-feature {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   footer .footer-text {
