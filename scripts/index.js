@@ -7,8 +7,8 @@ langbuttons.forEach((button) => {
       .then((response) => response.json())
       .then((data) => {
         textToChange.forEach((element) => {
-          const section = element.dataset.section;  // ej: carrouselHeader
-          const value = element.dataset.value;      // ej: slide1.title
+          const section = element.dataset.section;  
+          const value = element.dataset.value;    
 
           const keys = value.split(".");
           let text = data[section];
@@ -30,7 +30,6 @@ langbuttons.forEach((button) => {
 });
 
 
-/* Script de validación */
   document.getElementById('checkAvailability').addEventListener('click', function() {
     const sede = document.getElementById('sede').value;
     const llegada = document.getElementById('arrival').value;
