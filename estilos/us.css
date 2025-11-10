@@ -310,6 +310,7 @@ li span:hover {
   .us-1{
     margin: 0;
     padding: 0;
+    height: 400px;
   }
 
   .us-1-img {
@@ -328,7 +329,5 @@ li span:hover {
   li span {
   font-size: 0.8rem;
 }
-
-
 
 }
