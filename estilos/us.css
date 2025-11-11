@@ -184,16 +184,16 @@ footer {
 }
 
 .list-group li {
-  position: relative; 
-  margin-bottom: 3rem; 
-  cursor: pointer; 
+  position: relative;
+  margin-bottom: 3rem;
+  cursor: pointer;
   transition: color 0.3s ease, transform 0.3s ease;
   color: var(--boreal-blanco);
 }
 
 .list-group li:hover {
   color: #6ac2de;
-  transform:  translateX(10px);
+  transform: translateX(10px);
 }
 
 .list-group li img {
@@ -202,7 +202,7 @@ footer {
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  max-width:500px;
+  max-width: 500px;
   height: 200px;
   object-fit: cover;
   border-radius: 12px;
@@ -235,9 +235,33 @@ li span:hover {
 /* RESPONSIVE */
 
 @media (max-width: 992px) {
+  .us-1 {
+    height: 500px;
+    padding-bottom: 15px;
+  }
+
+  .us-1-text {
+    margin: 30px;
+    padding: 10px;
+  }
+
+  .hotel-section {
+    margin-top: 20px;
+  }
+
+  .hotel-feature {
+    overflow: visible !important;
+    margin: 15px;
+    padding: 3rem;
+  }
+
+  .list-group li {
+    margin-bottom: 0;
+  }
+
   .list-group li img {
-    position: static;
-    display: block;
+    position: static !important;
+    display: block !important;
     width: 100%;
     height: auto;
     margin-top: 1rem;
@@ -281,8 +305,9 @@ li span:hover {
     flex: 1 1 100%;
   }
 
-  .us-1 { 
+  .us-1 {
     height: 500px;
+    margin: 0%;
   }
 
   .us-1-text {
@@ -293,19 +318,10 @@ li span:hover {
 
   .hotel-feature {
     margin: 0;
-    padding: 0;
+    padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  footer .footer-text {
-    text-align: center !important;
-    margin-bottom: 1rem;
-  }
-
-  footer .social-icons {
-    justify-content: center !important;
   }
 
   .list-group li img {
@@ -320,6 +336,16 @@ li span:hover {
 
   .list-group li {
     transform: none !important;
+    margin-top: 20px;
+  }
+
+  footer .footer-text {
+    text-align: center !important;
+    margin-bottom: 1rem;
+  }
+
+  footer .social-icons {
+    justify-content: center !important;
   }
 
 }
@@ -331,27 +357,36 @@ li span:hover {
     text-align: center;
   }
 
-  .us-1{
-    margin: 0;
-    padding: 0;
-    height: 400px;
+  .us-1 {
+    height: auto;
+    margin: 0%;
+    position: static !important;
+    display:  block !important;
+    overflow: visible !important;
+    margin-bottom: 15px;
   }
 
   .us-1-img {
     margin: 0;
     padding: 0;
-    }
-  
+    position: static !important;
+  }
+
   .us-1-text {
-    font-size: 0.8rem
+    font-size: 0.8rem;
+    margin-top: 10px;
   }
 
   .hotel-feature {
-    padding: 0;
+    
   }
 
-  li span {
-  font-size: 0.8rem;
+  .list-group li {
+  margin-top: 10px; 
+  margin-bottom: 10px;
 }
 
+  li span {
+    font-size: 0.8rem;
+  }
 }
