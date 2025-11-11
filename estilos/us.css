@@ -35,7 +35,7 @@ header::before {
   position: fixed;
   top: 0;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 2;
+  z-index: 99999;
 }
 
 .navbar-nav .nav-link {

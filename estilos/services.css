@@ -1,55 +1,62 @@
-:root {
-  --boreal-azul: #0f416b;
-  --boreal-celeste: #b1d5db;
-  --boreal-blanco: #ffffff;
-  --boreal-acento: #6ac2de;
-}
+    :root {
+      --boreal-azul: #0f416b;
+      --boreal-celeste: #b1d5db;
+      --boreal-blanco: #ffffff;
+      --boreal-acento: #6ac2de;
+    }
 
-body {
-  font-family: "Noto Sans", Arial, sans-serif;
-  color: #000;
-  background-color: #f7f9fb;
-  overflow-x: hidden;
-}
+    body {
+      font-family: "Noto Sans", Arial, sans-serif;
+      color: #000;
+      background-color: #f7f9fb;
+    }
 
-header {
-  position: relative;
-  height: 300px;
-  padding-top: 70px;
-  color: rgb(233, 233, 233);
-  background: var(--boreal-azul) no-repeat center 70% / cover;
-}
+    body h1 {
+      font-size: 10px;
+    }
 
-header::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 300px;
-  background-color: rgba(0, 0, 0, 0.65);
-  z-index: 1;
-}
+    header {
+      padding-top: 60px; 
+      background: var(--boreal-azul) no-repeat center 70% / cover;
+      height: 300px;
+      position: relative;
+      color: rgb(233, 233, 233);
+      z-index: 1; 
+    }
 
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(6px);
-}
+    header::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 300px;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.65);
+      z-index: 1;
+    }
 
-.navbar-nav .nav-link {
-  color: #fff !important;
-  font-weight: 600;
-  letter-spacing: 1px;
-  transition: 0.2s;
-}
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 9999; 
+    }
 
-.navbar-nav .nav-link:hover {
-  text-decoration: underline;
-}
+    .navbar-nav .nav-link {
+      color: #fff !important;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    .navbar-nav .nav-link:hover {
+      text-decoration: underline;
+    }
+
+
+    .navbar-nav .nav-link:hover {
+      text-decoration: underline;
+    }
 
 .languages {
   display: flex;
